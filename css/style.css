@@ -209,6 +209,7 @@ a:hover{opacity:.92}
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent; /* add this */
   text-shadow: 0 0 22px rgba(0,209,255,.25);
 }
 
