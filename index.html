@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Headings: Space Grotesk, Body: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=8" />
+  <link rel="stylesheet" href="/css/style.css?v=9" />
 </head>
 <body>
   <!-- ===== NAV ===== -->
@@ -19,9 +19,7 @@
         <span class="brand__glyph">MM</span><span class="brand__text">Mobeen</span>
       </a>
 
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- No hamburger button -->
 
       <nav class="nav__links" role="navigation">
         <a href="#about">About</a>
@@ -60,7 +58,6 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
-      <!-- Made accent card -->
       <div class="card card--accent">
         <p>
           I’m an undergraduate in Mathematics & Computer Science at the University of Bristol.
@@ -137,7 +134,6 @@
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
-        <!-- Both items are now accent cards -->
         <div class="timeline__item card card--accent">
           <div class="when">Aug–Sep 2023</div>
           <div class="what">
@@ -174,8 +170,7 @@
     </div>
   </footer>
 
-  <!-- Dark/blur overlay for mobile menu -->
-  <div class="nav__overlay"></div>
+  <!-- No overlay -->
 
   <script src="js/main.js"></script>
 </body>
