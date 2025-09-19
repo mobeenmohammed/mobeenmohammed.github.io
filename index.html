@@ -1,10 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5T74PZSX8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-P5T74PZSX8', { anonymize_ip: true });
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mobeen Mohammed — Portfolio</title>
   <meta name="description" content="Portfolio of Mobeen Mohammed — CS & Math, systems, HPC, C++/Rust, research write-ups." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Headings: Space Grotesk, Body: Inter -->
@@ -18,8 +28,6 @@
       <a class="brand" href="#top" aria-label="Home">
         <span class="brand__glyph">MM</span><span class="brand__text">Mobeen</span>
       </a>
-
-      <!-- No hamburger button -->
 
       <nav class="nav__links" role="navigation">
         <a href="#about">About</a>
@@ -41,16 +49,12 @@
       </p>
       <div class="cta">
         <a class="btn btn--solid" href="mailto:you@example.com">Get in touch</a>
-        <a class="btn btn--ghost" href="https://github.com/mobeenmohammed" target="_blank" rel="noreferrer">GitHub</a>
-        <!-- Replace with your PDF when ready -->
-        <a class="btn btn--ghost" href="/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
+        <a class="btn btn--ghost" href="https://github.com/mobeenmohammed" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn--ghost" href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
     </div>
 
-    <!-- Northern-lights layer -->
     <div class="aurora" aria-hidden="true"></div>
-
-    <!-- subtle grid / glow background -->
     <div class="hero__fx"></div>
   </section>
 
@@ -89,9 +93,9 @@
           </div>
           <p>Static analysis tool that computes cyclomatic complexity and function-level metrics for C codebases. Built custom tokenizer & parser; outputs JSON and pretty reports.</p>
           <div class="project__links">
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-            <a href="#" target="_blank" rel="noreferrer">Source</a>
-            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Source</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Write-up</a>
           </div>
         </article>
 
@@ -106,8 +110,8 @@
           <p>Cacheline, branch, and memory-bandwidth microbenchmarks with reproducible runs.
              Reports include flamegraphs and commentary on results.</p>
           <div class="project__links">
-            <a href="#" target="_blank" rel="noreferrer">Demo</a>
-            <a href="#" target="_blank" rel="noreferrer">Source</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Source</a>
           </div>
         </article>
 
@@ -122,7 +126,7 @@
           <p>Polynomial type with evaluation, addition, multiplication; clean API and tests.
              Exploring FFT-based multiplication next.</p>
           <div class="project__links">
-            <a href="#" target="_blank" rel="noreferrer">Source</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Source</a>
           </div>
         </article>
       </div>
@@ -157,9 +161,9 @@
     <div class="container">
       <h2>Contact</h2>
       <div class="card contact">
-        <p>Email: <a href="mobeenmohammed4352@gmail.com">mobeenmohammed4352@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/mobeenmohammed" target="_blank" rel="noreferrer">My GitHub</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/mobeen-m1234/" target="_blank" rel="noreferrer">Mobeen's LinkedIn</a></p>
+        <p>Email: <a href="mailto:mobeenmohammed4352@gmail.com">mobeenmohammed4352@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/mobeenmohammed" target="_blank" rel="noopener noreferrer">My GitHub</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mobeen-m1234/" target="_blank" rel="noopener noreferrer">Mobeen's LinkedIn</a></p>
       </div>
     </div>
   </section>
@@ -170,8 +174,6 @@
     </div>
   </footer>
 
-  <!-- No overlay -->
-
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>
