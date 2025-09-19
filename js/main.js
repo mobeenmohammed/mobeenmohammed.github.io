@@ -7,3 +7,10 @@ if (toggle && links){
   });
 }
 document.getElementById('year').textContent = new Date().getFullYear();
+
+document.querySelectorAll('.nav__links a').forEach(link => {
+  link.addEventListener('click', () => {
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+});
