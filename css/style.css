@@ -303,3 +303,44 @@ a:hover{opacity:.92}
 
 /* ===== FOOTER ===== */
 .footer{padding:32px 0; color:var(--muted); text-align:center; border-top:1px solid rgba(255,255,255,.06)}
+
+/* Project cards: blue outline + subtle glow */
+.project.card{
+  border-color: rgba(0, 209, 255, 0.35);            /* cyan edge */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 0 1px rgba(0, 209, 255, 0.20) inset,        /* inner edge */
+    0 8px 24px rgba(0, 209, 255, 0.10);             /* soft outer glow */
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.project.card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(0,0,0,.45),
+    0 0 0 1px rgba(0, 229, 255, 0.35) inset,
+    0 12px 36px rgba(0, 229, 255, 0.22);
+}
+
+/* Experience items as cards */
+.timeline__item{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+  /* keep your existing grid layout */
+}
+
+/* give experience cards a subtle cyan edge too */
+.timeline__item{
+  border-color: rgba(0, 209, 255, 0.20);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.30),
+    0 0 0 1px rgba(0, 209, 255, 0.12) inset;
+}
+.timeline__item:hover{
+  box-shadow:
+    0 14px 36px rgba(0,0,0,.40),
+    0 0 0 1px rgba(0, 229, 255, 0.24) inset;
+}
+
