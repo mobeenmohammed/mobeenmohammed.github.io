@@ -344,3 +344,39 @@ a:hover{opacity:.92}
     0 0 0 1px rgba(0, 229, 255, 0.24) inset;
 }
 
+/* Reusable cyan-outlined card (matches project cards) */
+.card--accent,
+.project.card{
+  border-color: rgba(0, 209, 255, 0.35);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 0 1px rgba(0, 209, 255, 0.20) inset,
+    0 8px 24px rgba(0, 209, 255, 0.10);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card--accent:hover,
+.project.card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(0,0,0,.45),
+    0 0 0 1px rgba(0, 229, 255, 0.35) inset,
+    0 12px 36px rgba(0, 229, 255, 0.22);
+}
+
+/* Experience: keep its grid layout only (let the card styles handle visuals) */
+.timeline__item{
+  display:grid;
+  gap:.8rem;
+  grid-template-columns: 120px 1fr;
+  align-items:start;
+  /* no visual styles here - the .card/.card--accent provides them */
+}
+
+/* Tidy timeline text spacing */
+.timeline__item .when{ color: var(--muted); font-weight:500; margin-top:.15rem; }
+.timeline__item .what p{ margin:.35rem 0 0; }
+
+/* Mobile: soften borders a touch */
+@media (max-width:720px){
+  .card--accent{ border-width:1px; }
+}
