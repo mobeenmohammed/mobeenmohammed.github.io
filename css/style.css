@@ -291,3 +291,20 @@ a:hover{opacity:.92}
   }
   .nav__links a:hover{ color:var(--text); }
 }
+
+/* Brighter gradient + glow for the hero name on mobile */
+@media (max-width: 820px){
+  .gradient-text{
+    /* slightly brighter endpoints than desktop */
+    background-image: linear-gradient(90deg, #7a6aff 0%, #33daff 100%);
+    /* extra glow for contrast on small screens */
+    text-shadow:
+      0 0 28px rgba(50,220,255,.45),
+      0 0 10px rgba(107,91,255,.35),
+      0 1px 0 rgba(0,0,0,.4);
+    -webkit-text-stroke: 0.3px rgba(255,255,255,.08); /* subtle edge to improve legibility */
+    font-weight: 700; /* keeps it consistent & crisper on OLED */
+  }
+}
+
+
