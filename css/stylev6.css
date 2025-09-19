@@ -331,16 +331,35 @@ a:hover{opacity:.92}
   /* keep your existing grid layout */
 }
 
-/* give experience cards a subtle cyan edge too */
+/* Experience items as cards (match projects) */
 .timeline__item{
-  border-color: rgba(0, 209, 255, 0.20);
+  /* keep layout */
+  display: grid;
+  gap: .8rem;
+  grid-template-columns: 120px 1fr;
+  align-items: start;
+
+  /* card styling */
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border: 2px solid var(--acc-2);  /* cyan edge */
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
   box-shadow:
     0 10px 30px rgba(0,0,0,.30),
-    0 0 0 1px rgba(0, 209, 255, 0.12) inset;
+    0 0 0 1px rgba(0, 209, 255, 0.18) inset;
+  transition: box-shadow .2s ease, transform .2s ease;
 }
 .timeline__item:hover{
+  transform: translateY(-2px);
   box-shadow:
     0 14px 36px rgba(0,0,0,.40),
-    0 0 0 1px rgba(0, 229, 255, 0.24) inset;
+    0 0 0 1px rgba(0, 229, 255, 0.28) inset;
 }
+/* tidy text */
+.timeline__item .when{ color: var(--muted); font-weight:500; margin-top:.15rem; }
+.timeline__item .what p{ margin:.35rem 0 0; }
 
+/* Mobile: soften border */
+@media (max-width: 720px){
+  .timeline__item{ border-width:1px; }
+}
