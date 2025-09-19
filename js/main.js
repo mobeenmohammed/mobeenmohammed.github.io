@@ -7,14 +7,14 @@ if (toggle && links && overlay){
     const open = links.classList.toggle('is-open');
     overlay.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';  // NEW
+    document.body.style.overflow = open ? 'hidden' : '';
   });
 
   overlay.addEventListener('click', ()=>{
     links.classList.remove('is-open');
     overlay.classList.remove('is-open');
     toggle.setAttribute('aria-expanded','false');
-    document.body.style.overflow = '';                     // NEW
+    document.body.style.overflow = '';
   });
 }
 
@@ -25,6 +25,6 @@ document.querySelectorAll('.nav__links a').forEach(link => {
     links.classList.remove('is-open');
     overlay.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';                     // NEW
+    document.body.style.overflow = '';
   });
 });
