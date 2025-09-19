@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mobeen Mohammed — Portfolio</title>
+  <meta name="description" content="Portfolio of Mobeen Mohammed — CS & Math, systems, HPC, C++/Rust, research write-ups." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Headings: Space Grotesk, Body: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__glyph">MM</span><span class="brand__text">Mobeen</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" role="navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="hero">
+    <div class="container hero__inner">
+      <div class="eyebrow">CS & Math • Systems • HPC</div>
+      <h1 class="gradient-text">Mobeen Mohammed</h1>
+      <p class="lead">
+        I build high-performance systems and write about algorithms, compilers, and OS/architecture.
+        Previously at First Light Fusion & Imperial College London.
+      </p>
+      <div class="cta">
+        <a class="btn btn--solid" href="mailto:you@example.com">Get in touch</a>
+        <a class="btn btn--ghost" href="https://github.com/mobeenmohammed" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Replace with your PDF when ready -->
+        <a class="btn btn--ghost" href="/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
+      </div>
+    </div>
+    <!-- subtle grid / glow background -->
+    <div class="hero__fx"></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m an undergraduate in Mathematics & Computer Science at the University of Bristol.
+          I enjoy low-level systems, performance engineering, and algorithmic problem solving.
+          My current focus: <strong>HPC in C++/Rust, OS internals, and compilers in Haskell/Rust</strong>.
+        </p>
+        <ul class="bullets">
+          <li>Languages: C++, Rust, Python, Java, Haskell, SQL</li>
+          <li>Interests: HPC, compilers, systems design, quantitative methods</li>
+          <li>Writing: experiment notes, performance reports, and learning logs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card project">
+          <div class="project__header">
+            <h3>Code Complexity Analyzer (C)</h3>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">Parsing</span><span class="chip">CLI</span>
+            </div>
+          </div>
+          <p>Static analysis tool that computes cyclomatic complexity and function-level metrics for C codebases. Built custom tokenizer & parser; outputs JSON and pretty reports.</p>
+          <div class="project__links">
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a href="#" target="_blank" rel="noreferrer">Source</a>
+            <a href="#" target="_blank" rel="noreferrer">Write-up</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project">
+          <div class="project__header">
+            <h3>HPC Microbench Suite</h3>
+            <div class="chips">
+              <span class="chip">C++</span><span class="chip">Perf</span><span class="chip">NUMA</span>
+            </div>
+          </div>
+          <p>Cacheline, branch, and memory-bandwidth microbenchmarks with reproducible runs.
+             Reports include flamegraphs and commentary on results.</p>
+          <div class="project__links">
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a href="#" target="_blank" rel="noreferrer">Source</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project">
+          <div class="project__header">
+            <h3>Poly Library (Haskell)</h3>
+            <div class="chips">
+              <span class="chip">Haskell</span><span class="chip">Algebra</span>
+            </div>
+          </div>
+          <p>Polynomial type with evaluation, addition, multiplication; clean API and tests.
+             Exploring FFT-based multiplication next.</p>
+          <div class="project__links">
+            <a href="#" target="_blank" rel="noreferrer">Source</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="when">Aug–Sep 2023</div>
+          <div class="what">
+            <strong>Data Science Intern — First Light Fusion</strong>
+            <p>Built data pipelines and analysis tools for experimental datasets; presented findings to research team.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="when">Jun 2023</div>
+          <div class="what">
+            <strong>Research Intern — Imperial College London</strong>
+            <p>Assisted with computational experiments and literature synthesis; wrote reproducible notebooks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card contact">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/mobeenmohammed" target="_blank" rel="noreferrer">@mobeenmohammed</a></p>
+        <p>LinkedIn: <a href="#" target="_blank" rel="noreferrer">Your LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Mobeen Mohammed. Built with HTML/CSS. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
