@@ -100,15 +100,22 @@ a:hover{opacity:.92}
 }
 
 /* Overlay for mobile menu */
-.nav__overlay {
+.nav__overlay{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  z-index: 998; /* sits under menu */
-  display: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* iOS/Safari */
+  z-index: 998;               /* under menu (menu is 999) */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
 }
-.nav__overlay.is-open { display: block; }
+.nav__overlay.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 /* ===== HERO ===== */
 .hero{
@@ -118,21 +125,33 @@ a:hover{opacity:.92}
 }
 
 /* Moving gradient background behind hero */
+/* Moving gradient background behind hero */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background: radial-gradient(800px at 20% 30%, rgba(107,91,255,.15), transparent 70%),
-              radial-gradient(600px at 80% 40%, rgba(0,209,255,.15), transparent 70%);
+
+  /* two radial layers that we will move */
+  background:
+    radial-gradient(600px 600px at 20% 30%, rgba(107,91,255,.18), transparent 70%),
+    radial-gradient(500px 500px at 80% 40%, rgba(0,209,255,.18), transparent 70%);
+  background-repeat: no-repeat, no-repeat;
+
+  /* crucial: starting positions & sizes so animation is visible */
+  background-position: 0% 0%, 100% 100%;
+  background-size: 120% 120%, 120% 120%;
+
   z-index:-1;
   animation: drift 18s ease-in-out infinite alternate;
+  will-change: background-position;
 }
 
-@keyframes drift {
-  0%   { background-position: 0% 0%, 100% 100%; }
-  50%  { background-position: 50% 20%, 60% 80%; }
-  100% { background-position: 100% 0%, 0% 100%; }
+@keyframes drift{
+  0%   { background-position: 0% 0%,    100% 100%; }
+  50%  { background-position: 40% 20%,   70% 80%;  }
+  100% { background-position: 100% 0%,   0% 100%;  }
 }
+
 
 .hero__inner{max-width:820px}
 .eyebrow{
