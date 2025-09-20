@@ -308,3 +308,39 @@ a:hover{opacity:.92}
 }
 
 
+/* ===== Resources page helpers ===== */
+
+/* Strong gradient blue text (for headings) */
+.blue-gradient-text{
+  background: linear-gradient(90deg, #5b7bff, #00d1ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(0,209,255,.18);
+}
+
+/* Softer gradient for body text (keeps readability) */
+.blue-gradient-text--soft{
+  background: linear-gradient(90deg, rgba(91,123,255,.98), rgba(0,209,255,.98));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Weekly resource cards */
+.resource-card{ margin: 1rem 0; }
+.resource-card__header{
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+  margin-bottom:.5rem;
+}
+.resource-card__links{
+  display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.6rem;
+}
+
+@media (max-width:720px){
+  .resource-card__links .btn{ width:100%; justify-content:center; }
+}
+
+
