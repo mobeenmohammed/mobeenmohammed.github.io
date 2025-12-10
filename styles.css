@@ -35,8 +35,8 @@ body {
 
   --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.9);
 
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Inter", "Segoe UI", sans-serif;
+  /* Use Computer Modern Serif everywhere, with sensible fallbacks */
+  --font-sans: "Computer Modern Serif", Georgia, "Times New Roman", serif;
 }
 
 body {
