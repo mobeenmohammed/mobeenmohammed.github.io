@@ -35,8 +35,9 @@ body {
 
   --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.9);
 
-  /* Use Computer Modern Serif everywhere, with sensible fallbacks */
-  --font-sans: "Computer Modern Serif", Georgia, "Times New Roman", serif;
+  /* Use Computer Modern*/
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
 }
 
 body {
@@ -338,13 +339,16 @@ a {
     0 0 30px rgba(34, 211, 238, 0.45);
 }
 
+/* Use Computer Modern just for key headings so it feels lighter */
+
+.hero-title,
+.section-title,
 .brand-text {
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  color: #f9fafb;
+  font-family: "Computer Modern Sans", system-ui, -apple-system,
+    BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+  font-weight: 500; /* lighter than default bold */
 }
+
 
 .brand-accent {
   color: var(--accent);
@@ -433,12 +437,11 @@ a {
 }
 
 .hero-kicker {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 0 0 0.7rem;
+  font-family: "Computer Modern Sans", system-ui, -apple-system,
+    BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+  font-weight: 500;
 }
+
 
 .hero-title {
   font-size: clamp(2.6rem, 3.5vw, 3.1rem);
