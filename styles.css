@@ -35,7 +35,6 @@ body {
 
   --shadow-soft: 0 26px 70px rgba(0, 0, 0, 0.9);
 
-  /* Use Computer Modern*/
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Inter", "Segoe UI", sans-serif;
 }
@@ -339,16 +338,13 @@ a {
     0 0 30px rgba(34, 211, 238, 0.45);
 }
 
-/* Use Computer Modern just for key headings so it feels lighter */
-
-.hero-title,
-.section-title,
 .brand-text {
-  font-family: "Computer Modern Sans", system-ui, -apple-system,
-    BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
-  font-weight: 500; /* lighter than default bold */
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  color: #f9fafb;
 }
-
 
 .brand-accent {
   color: var(--accent);
@@ -437,11 +433,12 @@ a {
 }
 
 .hero-kicker {
-  font-family: "Computer Modern Sans", system-ui, -apple-system,
-    BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
-  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.7rem;
 }
-
 
 .hero-title {
   font-size: clamp(2.6rem, 3.5vw, 3.1rem);
@@ -798,13 +795,12 @@ a {
 
 /* Node logo */
 
-/* Bigger logos so company marks are clearly visible */
 .node-logo {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 1.4rem;
-  border: 1px solid rgba(148, 163, 184, 0.9);
+  width: 52px;
+  height: 52px;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(148, 163, 184, 0.8);
   background: radial-gradient(circle at 0% 0%, #0f172a, #020617);
   display: flex;
   align-items: center;
@@ -813,17 +809,9 @@ a {
 }
 
 .node-logo img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 78%;
+  max-height: 78%;
   display: block;
-}
-
-/* Slightly smaller on very narrow screens so layout doesn’t explode */
-@media (max-width: 520px) {
-  .node-logo {
-    width: 68px;
-    height: 68px;
-  }
 }
 
 /* section-specific node backgrounds */
